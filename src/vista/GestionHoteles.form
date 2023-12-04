@@ -67,9 +67,9 @@
                                       </Group>
                                   </Group>
                                   <Component id="lblDatos" alignment="1" max="32767" attributes="0"/>
-                                  <Component id="jScrollPane2" alignment="0" pref="246" max="32767" attributes="0"/>
+                                  <Component id="jScrollPane2" alignment="0" pref="257" max="32767" attributes="0"/>
                                   <Group type="102" alignment="1" attributes="0">
-                                      <Group type="103" groupAlignment="1" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
                                           <Component id="lblDesc" alignment="0" max="32767" attributes="0"/>
                                           <Component id="lblEstrellas" alignment="0" max="32767" attributes="0"/>
                                           <Component id="lblTele" alignment="0" max="32767" attributes="0"/>
@@ -77,8 +77,9 @@
                                           <Component id="lblPais" alignment="0" max="32767" attributes="0"/>
                                           <Component id="lblCorreo" alignment="0" max="32767" attributes="0"/>
                                           <Component id="lblWeb" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="lblHabitaciones" alignment="0" max="32767" attributes="0"/>
                                       </Group>
-                                      <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                           <Component id="txtPais" alignment="1" pref="166" max="32767" attributes="0"/>
                                           <Component id="txtCiudad" alignment="1" max="32767" attributes="0"/>
@@ -86,6 +87,7 @@
                                           <Component id="txtTele" alignment="1" max="32767" attributes="0"/>
                                           <Component id="txtCorreo" alignment="1" max="32767" attributes="0"/>
                                           <Component id="txtWeb" max="32767" attributes="0"/>
+                                          <Component id="txtHabitaciones" alignment="1" max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
                                   <Component id="lblErrorDatos" alignment="0" max="32767" attributes="0"/>
@@ -166,18 +168,23 @@
                           <Component id="txtWeb" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="lblHabitaciones" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtHabitaciones" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
                       <Component id="lblDesc" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
-                      <Component id="jScrollPane2" max="32767" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="jScrollPane2" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
                       <Component id="lblErrorDatos" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" attributes="0">
                       <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
-                      <Component id="jScrollPane1" min="-2" pref="451" max="-2" attributes="0"/>
+                      <Component id="jScrollPane1" min="-2" pref="477" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace pref="44" max="32767" attributes="0"/>
+              <EmptySpace pref="31" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -373,6 +380,14 @@
         <Property name="horizontalAlignment" type="int" value="4"/>
         <Property name="text" type="java.lang.String" value="Etiqueta de error"/>
       </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblHabitaciones">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="4"/>
+        <Property name="text" type="java.lang.String" value="Habitaciones"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtHabitaciones">
     </Component>
   </SubComponents>
 </Form>
