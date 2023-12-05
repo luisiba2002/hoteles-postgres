@@ -83,17 +83,14 @@ public class GestionHoteles extends javax.swing.JFrame {
 
         lblDireccion.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblDireccion.setText("Dirección");
-        lblDireccion.setMaximumSize(new java.awt.Dimension(50, 16));
         lblDireccion.setPreferredSize(null);
 
         lblCiudad.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblCiudad.setText("Ciudad");
-        lblCiudad.setMaximumSize(new java.awt.Dimension(38, 16));
         lblCiudad.setPreferredSize(null);
 
         lblPais.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblPais.setText("País");
-        lblPais.setMaximumSize(new java.awt.Dimension(21, 16));
         lblPais.setPreferredSize(null);
 
         btnBuscar.setText("Buscar");
