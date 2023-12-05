@@ -16,10 +16,10 @@ import java.util.logging.Logger;
  */
 public class ConexionMB {
   Connection conexion;
-    public String db_name = "acceso_datos";
+    public String db_name = "hotelesdb";
     public String user = "root";
     public String passwd = "root";
-    public String dir = "jdbc:mysql://localhost/" + db_name;
+    public String dir = "jdbc:postgresql://localhost/" + db_name;
 
    
     
