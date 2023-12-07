@@ -41,7 +41,7 @@ public class GestionClientes extends javax.swing.JFrame {
         btnBuscarCliente = new javax.swing.JButton();
         btnEditar = new javax.swing.JButton();
         btnBorrar = new javax.swing.JButton();
-        btnAñadir = new javax.swing.JButton();
+        btnCrear = new javax.swing.JButton();
         txtNombre = new javax.swing.JTextField();
         txtApellido = new javax.swing.JTextField();
         lblApellido = new javax.swing.JLabel();
@@ -76,7 +76,7 @@ public class GestionClientes extends javax.swing.JFrame {
 
         btnBorrar.setText("Borrar");
 
-        btnAñadir.setText("Añadir");
+        btnCrear.setText("Crear");
 
         lblApellido.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblApellido.setText("Apellido");
@@ -134,7 +134,7 @@ public class GestionClientes extends javax.swing.JFrame {
                             .addComponent(lblErrorCrud, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(0, 0, Short.MAX_VALUE)
-                                .addComponent(btnAñadir)
+                                .addComponent(btnCrear)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(btnEditar)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -172,7 +172,7 @@ public class GestionClientes extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(btnEditar)
                             .addComponent(btnBorrar)
-                            .addComponent(btnAñadir))
+                            .addComponent(btnCrear))
                         .addGap(4, 4, 4)
                         .addComponent(lblErrorCrud)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -258,10 +258,10 @@ public class GestionClientes extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton btnAceptar;
-    private javax.swing.JButton btnAñadir;
     private javax.swing.JButton btnBorrar;
     private javax.swing.JButton btnBuscarCliente;
     public javax.swing.JButton btnCancelar;
+    private javax.swing.JButton btnCrear;
     private javax.swing.JButton btnEditar;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblApellido;
@@ -282,6 +282,7 @@ public class GestionClientes extends javax.swing.JFrame {
     private javax.swing.JTextField txtNombre;
     // End of variables declaration//GEN-END:variables
 
+    
     /*
     Getter y setter
     */
@@ -289,8 +290,8 @@ public class GestionClientes extends javax.swing.JFrame {
         return btnAceptar;
     }
 
-    public JButton getBtnAñadir() {
-        return btnAñadir;
+    public JButton getBtnCrear() {
+        return btnCrear;
     }
 
     public JButton getBtnBorrar() {
@@ -309,6 +310,10 @@ public class GestionClientes extends javax.swing.JFrame {
         return btnEditar;
     }
 
+    public JLabel getLblErrorCrud(){
+        return lblErrorCrud;
+    }
+    
     public void setLblErrorCrud(String texto) {
         this.lblErrorCrud.setText(texto);
     }
@@ -365,6 +370,10 @@ public class GestionClientes extends javax.swing.JFrame {
         return listCliente.getModel();
     }
 
+    public JList<String> getJList(){
+        return listCliente;
+    }
+    
     public void setListCliente(ListModel<String> model) {
         this.listCliente.setModel(model);
     }
