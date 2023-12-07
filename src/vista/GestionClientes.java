@@ -4,6 +4,12 @@
  */
 package vista;
 
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JList;
+import javax.swing.JTextField;
+import javax.swing.ListModel;
+
 /**
  *
  * @author Diurno
@@ -26,21 +32,21 @@ public class GestionClientes extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        jTextBuscarCliente = new javax.swing.JTextField();
+        lblBuscar = new javax.swing.JLabel();
+        txtBuscar = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jListaClientes = new javax.swing.JList<>();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        listCliente = new javax.swing.JList<>();
+        lblCorreo = new javax.swing.JLabel();
+        lblNombre = new javax.swing.JLabel();
         btnBuscarCliente = new javax.swing.JButton();
         btnEditar = new javax.swing.JButton();
         btnBorrar = new javax.swing.JButton();
         btnAñadir = new javax.swing.JButton();
         txtNombre = new javax.swing.JTextField();
         txtApellido = new javax.swing.JTextField();
-        jLabel4 = new javax.swing.JLabel();
+        lblApellido = new javax.swing.JLabel();
         txtDni = new javax.swing.JTextField();
-        jLabel5 = new javax.swing.JLabel();
+        lblDni = new javax.swing.JLabel();
         txtCorreo = new javax.swing.JTextField();
         lblErrorCrud = new javax.swing.JLabel();
         lblDatos = new javax.swing.JLabel();
@@ -48,21 +54,21 @@ public class GestionClientes extends javax.swing.JFrame {
         btnCancelar = new javax.swing.JButton();
         lblErrorDatos = new javax.swing.JLabel();
         lblInstrucciones = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        lblLista = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("DNI de cliente");
+        lblBuscar.setText("DNI de cliente");
 
-        jTextBuscarCliente.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtBuscar.setHorizontalAlignment(javax.swing.JTextField.CENTER);
 
-        jScrollPane1.setViewportView(jListaClientes);
+        jScrollPane1.setViewportView(listCliente);
 
-        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel6.setText("Correo");
+        lblCorreo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblCorreo.setText("Correo");
 
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setText("Nombre ");
+        lblNombre.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblNombre.setText("Nombre ");
 
         btnBuscarCliente.setText("Buscar");
 
@@ -72,23 +78,11 @@ public class GestionClientes extends javax.swing.JFrame {
 
         btnAñadir.setText("Añadir");
 
-        txtApellido.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtApellidoActionPerformed(evt);
-            }
-        });
+        lblApellido.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblApellido.setText("Apellido");
 
-        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setText("Apellido");
-
-        txtDni.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtDniActionPerformed(evt);
-            }
-        });
-
-        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel5.setText("Dni");
+        lblDni.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblDni.setText("Dni");
 
         lblErrorCrud.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblErrorCrud.setText("Etiqueta de error");
@@ -104,7 +98,7 @@ public class GestionClientes extends javax.swing.JFrame {
 
         lblInstrucciones.setText("Instrucciones");
 
-        jLabel2.setText("Lista de clientes");
+        lblLista.setText("Lista de clientes");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -114,12 +108,12 @@ public class GestionClientes extends javax.swing.JFrame {
                 .addGap(30, 30, 30)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jScrollPane1)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(lblBuscar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jTextBuscarCliente)
+                        .addComponent(txtBuscar)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btnBuscarCliente))
-                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(lblLista, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(26, 26, 26)
@@ -149,17 +143,17 @@ public class GestionClientes extends javax.swing.JFrame {
                         .addGap(29, 29, 29)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel6)
+                                .addComponent(lblCorreo)
                                 .addGap(47, 47, 47)
                                 .addComponent(txtCorreo))
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel5)
+                                .addComponent(lblDni)
                                 .addGap(65, 65, 65)
                                 .addComponent(txtDni))
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel3)
-                                    .addComponent(jLabel4))
+                                    .addComponent(lblNombre)
+                                    .addComponent(lblApellido))
                                 .addGap(36, 36, 36)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(txtApellido)
@@ -193,29 +187,29 @@ public class GestionClientes extends javax.swing.JFrame {
                         .addComponent(lblDatos)
                         .addGap(6, 6, 6)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel3)
+                            .addComponent(lblNombre)
                             .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(9, 9, 9)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel4)
+                            .addComponent(lblApellido)
                             .addComponent(txtApellido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel5)
+                            .addComponent(lblDni)
                             .addComponent(txtDni, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel6)
+                            .addComponent(lblCorreo)
                             .addComponent(txtCorreo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(71, 71, 71)
-                        .addComponent(jLabel1)
+                        .addComponent(lblBuscar)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jTextBuscarCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(btnBuscarCliente))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabel2)
+                        .addComponent(lblLista)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(47, Short.MAX_VALUE))
@@ -223,14 +217,6 @@ public class GestionClientes extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void txtApellidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtApellidoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtApellidoActionPerformed
-
-    private void txtDniActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDniActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtDniActionPerformed
 
     /**
      * @param args the command line arguments
@@ -277,22 +263,110 @@ public class GestionClientes extends javax.swing.JFrame {
     private javax.swing.JButton btnBuscarCliente;
     public javax.swing.JButton btnCancelar;
     private javax.swing.JButton btnEditar;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JList<String> jListaClientes;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextField jTextBuscarCliente;
+    private javax.swing.JLabel lblApellido;
+    private javax.swing.JLabel lblBuscar;
+    private javax.swing.JLabel lblCorreo;
     private javax.swing.JLabel lblDatos;
+    private javax.swing.JLabel lblDni;
     private javax.swing.JLabel lblErrorCrud;
     private javax.swing.JLabel lblErrorDatos;
     private javax.swing.JLabel lblInstrucciones;
+    private javax.swing.JLabel lblLista;
+    private javax.swing.JLabel lblNombre;
+    private javax.swing.JList<String> listCliente;
     public javax.swing.JTextField txtApellido;
+    private javax.swing.JTextField txtBuscar;
     public javax.swing.JTextField txtCorreo;
     private javax.swing.JTextField txtDni;
     private javax.swing.JTextField txtNombre;
     // End of variables declaration//GEN-END:variables
+
+    /*
+    Getter y setter
+    */
+    public JButton getBtnAceptar() {
+        return btnAceptar;
+    }
+
+    public JButton getBtnAñadir() {
+        return btnAñadir;
+    }
+
+    public JButton getBtnBorrar() {
+        return btnBorrar;
+    }
+
+    public JButton getBtnBuscarCliente() {
+        return btnBuscarCliente;
+    }
+
+    public JButton getBtnCancelar() {
+        return btnCancelar;
+    }
+
+    public JButton getBtnEditar() {
+        return btnEditar;
+    }
+
+    public void setLblErrorCrud(String texto) {
+        this.lblErrorCrud.setText(texto);
+    }
+
+    public void setLblErrorDatos(String texto) {
+        this.lblErrorDatos.setText(texto);
+    }
+
+    public void setLblInstrucciones(String texto) {
+        this.lblInstrucciones.setText(texto);
+    }
+
+    public String getTxtApellido() {
+        return txtApellido.getText();
+    }
+
+    public void setTxtApellido(String texto) {
+        this.txtApellido.setText(texto);
+    }
+
+    public String getTxtBuscar() {
+        return txtBuscar.getText();
+    }
+
+    public void setTxtBuscar(String txtBuscar) {
+        this.txtBuscar.setText(txtBuscar);
+    }
+
+    public String getTxtCorreo() {
+        return txtCorreo.getText();
+    }
+
+    public void setTxtCorreo(String txtCorreo) {
+        this.txtCorreo.setText(txtCorreo);
+    }
+
+    public String getTxtDni() {
+        return txtDni.getText();
+    }
+
+    public void setTxtDni(String txtDni) {
+        this.txtDni.setText(txtDni);
+    }
+
+    public String getTxtNombre() {
+        return txtNombre.getText();
+    }
+
+    public void setTxtNombre(String txtNombre) {
+        this.txtNombre.setText(txtNombre);
+    }
+
+    public ListModel<String> getListCliente() {
+        return listCliente.getModel();
+    }
+
+    public void setListCliente(ListModel<String> model) {
+        this.listCliente.setModel(model);
+    }
+   
 }

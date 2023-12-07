@@ -79,11 +79,6 @@ public class GestionReservas extends javax.swing.JFrame {
         lblErrorCrud.setText("Etiqueta de error");
 
         btnBuscar.setText("Buscar");
-        btnBuscar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBuscarActionPerformed(evt);
-            }
-        });
 
         lblIdHabitacion.setText("Id habitación");
 
@@ -222,10 +217,6 @@ public class GestionReservas extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void btnBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarActionPerformed
-        // Enviar el el texto de txtBuscar al controlador para que busque una lista de hoteles que empiece con el nombre descrito.
-    }//GEN-LAST:event_btnBuscarActionPerformed
 
     /**
      * @param args the command line arguments
