@@ -15,11 +15,11 @@ import java.sql.Connection;
 public class AccesoDAO {
 
     Connection conexion;
-    ConexionMB login;
+    ConexionPostgre login;
  
 
     public AccesoDAO() {
-        this.login = new ConexionMB();
+        this.login = new ConexionPostgre();
         this.conexion = login.conectar();
         if (conexion != null) {
             System.out.println("Conectado");
