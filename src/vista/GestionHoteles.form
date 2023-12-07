@@ -42,57 +42,66 @@
                   <Group type="102" attributes="0">
                       <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
+                          <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="lblBuscar" min="-2" max="-2" attributes="0"/>
+                              <Component id="jScrollPane1" pref="242" max="32767" attributes="0"/>
+                              <Component id="lblLista" alignment="0" max="32767" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
                               <Component id="txtBuscar" min="-2" pref="164" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="btnBuscar" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <Group type="102" attributes="0">
-                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="lblBuscar" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jScrollPane1" pref="242" max="32767" attributes="0"/>
-                                  <Component id="lblLista" alignment="0" max="32767" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="1" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="1" attributes="0">
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="lblNombre" max="32767" attributes="0"/>
-                                          <Component id="lblDireccion" max="32767" attributes="0"/>
-                                      </Group>
-                                      <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                          <Component id="txtNombre" pref="166" max="32767" attributes="0"/>
-                                          <Component id="txtDireccion" max="32767" attributes="0"/>
-                                      </Group>
-                                  </Group>
-                                  <Component id="lblDatos" alignment="1" max="32767" attributes="0"/>
-                                  <Component id="jScrollPane2" alignment="0" pref="257" max="32767" attributes="0"/>
-                                  <Group type="102" alignment="1" attributes="0">
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="lblDesc" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="lblEstrellas" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="lblTele" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="lblCiudad" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="lblPais" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="lblCorreo" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="lblWeb" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="lblHabitaciones" alignment="0" max="32767" attributes="0"/>
-                                      </Group>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                          <Component id="txtPais" alignment="1" pref="166" max="32767" attributes="0"/>
-                                          <Component id="txtCiudad" alignment="1" max="32767" attributes="0"/>
-                                          <Component id="txtEstrellas" alignment="1" max="32767" attributes="0"/>
-                                          <Component id="txtTele" alignment="1" max="32767" attributes="0"/>
-                                          <Component id="txtCorreo" alignment="1" max="32767" attributes="0"/>
-                                          <Component id="txtWeb" max="32767" attributes="0"/>
-                                          <Component id="txtHabitaciones" alignment="1" max="32767" attributes="0"/>
-                                      </Group>
-                                  </Group>
-                                  <Component id="lblErrorDatos" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="lblErrorCrud" max="32767" attributes="0"/>
+                                  <Component id="lblNombre" max="32767" attributes="0"/>
+                                  <Component id="lblDireccion" max="32767" attributes="0"/>
                               </Group>
+                              <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="txtNombre" pref="166" max="32767" attributes="0"/>
+                                  <Component id="txtDireccion" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Component id="lblDatos" alignment="1" max="32767" attributes="0"/>
+                          <Component id="jScrollPane2" alignment="0" pref="257" max="32767" attributes="0"/>
+                          <Group type="102" alignment="1" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="lblDesc" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="lblEstrellas" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="lblTele" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="lblCiudad" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="lblPais" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="lblCorreo" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="lblWeb" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="lblHabitaciones" alignment="0" max="32767" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="txtPais" alignment="1" pref="166" max="32767" attributes="0"/>
+                                  <Component id="txtCiudad" alignment="1" max="32767" attributes="0"/>
+                                  <Component id="txtEstrellas" alignment="1" max="32767" attributes="0"/>
+                                  <Component id="txtTele" alignment="1" max="32767" attributes="0"/>
+                                  <Component id="txtCorreo" alignment="1" max="32767" attributes="0"/>
+                                  <Component id="txtWeb" max="32767" attributes="0"/>
+                                  <Component id="txtHabitaciones" alignment="1" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Component id="lblErrorCrud" max="32767" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="lblInstrucciones" max="32767" attributes="0"/>
+                              <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="lblErrorDatos" alignment="0" max="32767" attributes="0"/>
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                              <Component id="btnAceptar" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="btnCancelar" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
@@ -116,18 +125,32 @@
                   <Component id="lblErrorCrud" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="txtBuscar" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="btnBuscar" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lblDatos" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="lblLista" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="lblInstrucciones" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="btnCancelar" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnAceptar" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="lblErrorDatos" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="txtBuscar" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnBuscar" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Component id="lblLista" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
-                      <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+                      <Component id="lblDatos" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="lblNombre" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="txtNombre" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -176,13 +199,8 @@
                       <Component id="lblDesc" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="jScrollPane2" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
-                      <Component id="lblErrorDatos" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <Group type="102" attributes="0">
-                      <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
-                      <Component id="jScrollPane1" min="-2" pref="477" max="-2" attributes="0"/>
-                  </Group>
+                  <Component id="jScrollPane1" min="-2" pref="455" max="-2" attributes="0"/>
               </Group>
               <EmptySpace pref="31" max="32767" attributes="0"/>
           </Group>
@@ -235,16 +253,25 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Borrar"/>
       </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JButton" name="btnEditar">
       <Properties>
         <Property name="text" type="java.lang.String" value="Editar"/>
       </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JButton" name="btnCrear">
       <Properties>
         <Property name="text" type="java.lang.String" value="Crear"/>
       </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JTextField" name="txtNombre">
     </Component>
@@ -288,6 +315,9 @@
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnBuscarActionPerformed"/>
       </Events>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JLabel" name="lblEstrellas">
       <Properties>
@@ -333,12 +363,6 @@
     </Component>
     <Component class="javax.swing.JTextField" name="txtWeb">
     </Component>
-    <Component class="javax.swing.JLabel" name="lblErrorDatos">
-      <Properties>
-        <Property name="horizontalAlignment" type="int" value="4"/>
-        <Property name="text" type="java.lang.String" value="Etiqueta de error"/>
-      </Properties>
-    </Component>
     <Component class="javax.swing.JLabel" name="lblLista">
       <Properties>
         <Property name="text" type="java.lang.String" value="Lista de hoteles"/>
@@ -379,6 +403,33 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="txtHabitaciones">
+    </Component>
+    <Component class="javax.swing.JButton" name="btnAceptar">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Aceptar"/>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnCancelar">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Cancelar"/>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblErrorDatos">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="4"/>
+        <Property name="text" type="java.lang.String" value="Etiqueta de error"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblInstrucciones">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Instrucciones"/>
+      </Properties>
     </Component>
   </SubComponents>
 </Form>
