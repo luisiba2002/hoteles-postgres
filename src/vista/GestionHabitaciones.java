@@ -4,6 +4,11 @@
  */
 package vista;
 
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JList;
+import javax.swing.ListModel;
+
 /**
  *
  * @author Diurno
@@ -55,7 +60,7 @@ public class GestionHabitaciones extends javax.swing.JFrame {
         btnCancelar = new javax.swing.JButton();
         lblInstrucciones = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         lblBuscar.setText("Nombre del hotel");
 
@@ -270,12 +275,12 @@ public class GestionHabitaciones extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JButton btnAceptar;
-    public javax.swing.JButton btnBorrar;
-    public javax.swing.JButton btnBuscar;
-    public javax.swing.JButton btnCancelar;
-    public javax.swing.JButton btnCrear;
-    public javax.swing.JButton btnEditar;
+    private javax.swing.JButton btnAceptar;
+    private javax.swing.JButton btnBorrar;
+    private javax.swing.JButton btnBuscar;
+    private javax.swing.JButton btnCancelar;
+    private javax.swing.JButton btnCrear;
+    private javax.swing.JButton btnEditar;
     private javax.swing.JCheckBox checkDisponible;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
@@ -296,4 +301,134 @@ public class GestionHabitaciones extends javax.swing.JFrame {
     private javax.swing.JTextField txtNumero;
     private javax.swing.JTextField txtPrecio;
     // End of variables declaration//GEN-END:variables
+
+    public JButton getBtnAceptar() {
+        return btnAceptar;
+    }
+
+    public JButton getBtnBorrar() {
+        return btnBorrar;
+    }
+
+    public JButton getBtnBuscar() {
+        return btnBuscar;
+    }
+
+    public JButton getBtnCancelar() {
+        return btnCancelar;
+    }
+
+    public JButton getBtnCrear() {
+        return btnCrear;
+    }
+
+    public JButton getBtnEditar() {
+        return btnEditar;
+    }
+   
+    // Labels
+    
+    public void setLblInstrucciones(String texto) {
+        this.lblInstrucciones.setText(texto);
+    }
+    
+    /**
+     * Devuelve el objeto JLabel que muestra un error del crud. Solo lo llama el listener del controlador.
+     * @return JLabel
+     */
+    public JLabel getLblErrorCrud() {
+        return lblErrorCrud;
+    }
+
+    public void setLblErrorCrud(String lblErrorCrud) {
+        this.lblErrorCrud.setText(lblErrorCrud);
+    }
+    
+    /**
+     * Devuelve el objeto JLabel que muestra un error al introducir datos. Solo lo llama el listener del controlador.
+     * @return JLabel
+     */
+    public JLabel getLblErrorDatos() {
+        return lblErrorDatos;
+    }
+
+    public void setLblErrorDatos(String lblErrorDatos) {
+        this.lblErrorDatos.setText(lblErrorDatos);
+    }
+
+    // Lista
+    
+    /**
+     * Devuelve el objeto JList. Solo lo llama el listener de controlador.
+     * @return JList
+     */
+    public JList<String> getList() {
+        return listHabitaciones;
+    }
+    
+    /**
+     * 
+     * @return Devuelve un ListModel de cadenas que representan habitaciones.
+     */
+    public ListModel<String> getListHabitaciones() {
+        return listHabitaciones.getModel();
+    }
+
+    public void setListHabitaciones(ListModel<String> listHabitaciones) {
+        this.listHabitaciones.setModel(listHabitaciones);
+    }
+    
+     // Checkbox
+
+    public boolean getCheckDisponible() {
+        return checkDisponible.isSelected();
+    }
+    
+    public void setCheckDisponible(boolean checkDisponible) {
+        this.checkDisponible.setSelected(checkDisponible);
+    }
+
+
+    // Text field
+    
+    public String getTxtBuscar() {
+        return txtBuscar.getText();
+    }
+
+    public void setTxtBuscar(String txtBuscar) {
+        this.txtBuscar.setText(txtBuscar);
+    }
+
+    public String getTxtCapacidad() {
+        return txtCapacidad.getText();
+    }
+
+    public void setTxtCapacidad(String txtCapacidad) {
+        this.txtCapacidad.setText(txtCapacidad);
+    }
+
+    public String getTxtDesc() {
+        return txtDesc.getText();
+    }
+
+    public void setTxtDesc(String txtDesc) {
+        this.txtDesc.setText(txtDesc);
+    }
+
+    public String getTxtNumero() {
+        return txtNumero.getText();
+    }
+
+    public void setTxtNumero(String txtNumero) {
+        this.txtNumero.setText(txtNumero);
+    }
+
+    public String getTxtPrecio() {
+        return txtPrecio.getText();
+    }
+
+    public void setTxtPrecio(String txtPrecio) {
+        this.txtPrecio.setText(txtPrecio);
+    }
+    
 }

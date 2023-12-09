@@ -7,7 +7,6 @@ package vista;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JList;
-import javax.swing.JTextField;
 import javax.swing.ListModel;
 
 /**
@@ -56,7 +55,7 @@ public class GestionClientes extends javax.swing.JFrame {
         lblInstrucciones = new javax.swing.JLabel();
         lblLista = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         lblBuscar.setText("DNI de cliente");
 
@@ -257,10 +256,10 @@ public class GestionClientes extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JButton btnAceptar;
+    private javax.swing.JButton btnAceptar;
     private javax.swing.JButton btnBorrar;
     private javax.swing.JButton btnBuscarCliente;
-    public javax.swing.JButton btnCancelar;
+    private javax.swing.JButton btnCancelar;
     private javax.swing.JButton btnCrear;
     private javax.swing.JButton btnEditar;
     private javax.swing.JScrollPane jScrollPane1;
@@ -310,22 +309,56 @@ public class GestionClientes extends javax.swing.JFrame {
         return btnEditar;
     }
 
-    public JLabel getLblErrorCrud(){
-        return lblErrorCrud;
-    }
+    // Labels
     
-    public void setLblErrorCrud(String texto) {
-        this.lblErrorCrud.setText(texto);
-    }
-
-    public void setLblErrorDatos(String texto) {
-        this.lblErrorDatos.setText(texto);
-    }
-
     public void setLblInstrucciones(String texto) {
         this.lblInstrucciones.setText(texto);
     }
+    
+    /**
+     * Devuelve el objeto JLabel que muestra un error del crud. Solo lo llama el listener del controlador.
+     * @return JLabel
+     */
+    public javax.swing.JLabel getLblErrorCrud() {
+        return lblErrorCrud;
+    }
 
+    public void setLblErrorCrud(String lblErrorCrud) {
+        this.lblErrorCrud.getText();
+    }
+
+    public javax.swing.JLabel getLblErrorDatos() {
+        return lblErrorDatos;
+    }
+
+    public void setLblErrorDatos(String lblErrorDatos) {
+        this.lblErrorDatos.getText();
+    }
+    
+    // Lista
+     /**
+     * Devuelve el objeto JList. Solo lo llama el listener de controlador.
+     * @return JList
+     */
+    public JList<String> getJList(){
+        return listCliente;
+    }
+    
+    /**
+     * 
+     * @return Devuelve un ListModel de cadenas que representa hoteles.
+     */
+    public ListModel<String> getListCliente() {
+        return listCliente.getModel();
+    }
+    
+    public void setListCliente(ListModel<String> model) {
+        this.listCliente.setModel(model);
+    }
+   
+    
+    // Text fields
+    
     public String getTxtApellido() {
         return txtApellido.getText();
     }
@@ -365,17 +398,5 @@ public class GestionClientes extends javax.swing.JFrame {
     public void setTxtNombre(String txtNombre) {
         this.txtNombre.setText(txtNombre);
     }
-
-    public ListModel<String> getListCliente() {
-        return listCliente.getModel();
-    }
-
-    public JList<String> getJList(){
-        return listCliente;
-    }
     
-    public void setListCliente(ListModel<String> model) {
-        this.listCliente.setModel(model);
-    }
-   
 }

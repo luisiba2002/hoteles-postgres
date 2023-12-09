@@ -4,6 +4,11 @@
  */
 package vista;
 
+import javax.swing.JButton;
+import javax.swing.JList;
+import javax.swing.JTextArea;
+import javax.swing.ListModel;
+
 /**
  *
  * @author Diurno
@@ -63,7 +68,7 @@ public class GestionHoteles extends javax.swing.JFrame {
         lblErrorDatos = new javax.swing.JLabel();
         lblInstrucciones = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(600, 500));
         setPreferredSize(new java.awt.Dimension(600, 500));
 
@@ -325,11 +330,11 @@ public class GestionHoteles extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAceptar;
-    public javax.swing.JButton btnBorrar;
-    public javax.swing.JButton btnBuscar;
+    private javax.swing.JButton btnBorrar;
+    private javax.swing.JButton btnBuscar;
     private javax.swing.JButton btnCancelar;
-    public javax.swing.JButton btnCrear;
-    public javax.swing.JButton btnEditar;
+    private javax.swing.JButton btnCrear;
+    private javax.swing.JButton btnEditar;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JLabel lblBuscar;
@@ -361,4 +366,167 @@ public class GestionHoteles extends javax.swing.JFrame {
     private javax.swing.JTextField txtTele;
     private javax.swing.JTextField txtWeb;
     // End of variables declaration//GEN-END:variables
+
+    public JButton getBtnAceptar() {
+        return btnAceptar;
+    }
+
+    public JButton getBtnBorrar() {
+        return btnBorrar;
+    }
+
+    public JButton getBtnBuscar() {
+        return btnBuscar;
+    }
+
+    public JButton getBtnCancelar() {
+        return btnCancelar;
+    }
+
+    public JButton getBtnCrear() {
+        return btnCrear;
+    }
+
+    public JButton getBtnEditar() {
+        return btnEditar;
+    }
+
+    // Labels 
+    
+    public void setLblInstrucciones(String texto) {
+        this.lblInstrucciones.setText(texto);
+    }
+    
+    /**
+     * Devuelve el objeto JLabel que muestra un error del crud. Solo lo llama el listener del controlador.
+     * @return JLabel
+     */
+    public javax.swing.JLabel getLblErrorCrud() {
+        return lblErrorCrud;
+    }
+
+    public void setLblErrorCrud(String lblErrorCrud) {
+        this.lblErrorCrud.getText();
+    }
+
+    public javax.swing.JLabel getLblErrorDatos() {
+        return lblErrorDatos;
+    }
+
+    public void setLblErrorDatos(String lblErrorDatos) {
+        this.lblErrorDatos.getText();
+    }
+
+    /**
+     * Devuelve el objeto JList. Solo lo llama el listener de controlador.
+     * @return JList
+     */
+    public JList<String> getList() {
+        return listHotel;
+    }
+    
+    /**
+     * 
+     * @return Devuelve un ListModel de cadenas que representa hoteles.
+     */
+    public ListModel<String> getListModel() {
+        return listHotel.getModel();
+    }
+
+    public void setListModel(ListModel<String> listHotel) {
+        this.listHotel.setModel(listHotel);
+    }
+    
+    // Text field
+
+    public String getTxtBuscar() {
+        return txtBuscar.getText();
+    }
+
+    public void setTxtBuscar(String txtBuscar) {
+        this.txtBuscar.setText(txtBuscar);
+    }
+
+    public String getTxtCiudad() {
+        return txtCiudad.getText();
+    }
+
+    public void setTxtCiudad(String txtCiudad) {
+        this.txtCiudad.setText(txtCiudad);
+    }
+
+    public String getTxtCorreo() {
+        return txtCorreo.getText();
+    }
+
+    public void setTxtCorreo(String txtCorreo) {
+        this.txtCorreo.setText(txtCorreo);
+    }
+
+    public String getTxtDesc() {
+        return txtDesc.getText();
+    }
+
+    public void setTxtDesc(String txtDesc) {
+        this.txtDesc.setText(txtDesc);
+    }
+
+    public String getTxtDireccion() {
+        return txtDireccion.getText();
+    }
+
+    public void setTxtDireccion(String txtDireccion) {
+        this.txtDireccion.setText(txtDireccion);
+    }
+
+    public String getTxtEstrellas() {
+        return txtEstrellas.getText();
+    }
+
+    public void setTxtEstrellas(String txtEstrellas) {
+        this.txtEstrellas.setText(txtEstrellas);
+    }
+
+    public String getTxtHabitaciones() {
+        return txtHabitaciones.getText();
+    }
+
+    public void setTxtHabitaciones(String txtHabitaciones) {
+        this.txtHabitaciones.setText(txtHabitaciones);
+    }
+
+    public String getTxtNombre() {
+        return txtNombre.getText();
+    }
+
+    public void setTxtNombre(String txtNombre) {
+        this.txtNombre.setText(txtNombre);
+    }
+
+    public String getTxtPais() {
+        return txtPais.getText();
+    }
+
+    public void setTxtPais(String txtPais) {
+        this.txtPais.setText(txtPais);
+    }
+
+    public String getTxtTele() {
+        return txtTele.getText();
+    }
+
+    public void setTxtTele(String txtTele) {
+        this.txtTele.setText(txtTele);
+    }
+
+    public String getTxtWeb() {
+        return txtWeb.getText();
+    }
+
+    public void setTxtWeb(String txtWeb) {
+        this.txtWeb.setText(txtWeb);
+    }
+
+    
+
 }
