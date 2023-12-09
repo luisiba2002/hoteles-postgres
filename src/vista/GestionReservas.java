@@ -4,12 +4,21 @@
  */
 package vista;
 
+import javax.swing.JButton;
+import javax.swing.JCheckBox;
+import javax.swing.JLabel;
+import javax.swing.JList;
+import javax.swing.JTextField;
+
 /**
  *
  * @author Diurno
  */
 public class GestionReservas extends javax.swing.JFrame {
 
+  
+
+ 
     /**
      * Creates new form InterfaceHotel
      */
@@ -284,4 +293,141 @@ public class GestionReservas extends javax.swing.JFrame {
     private javax.swing.JTextField txtIdHabitacion;
     private javax.swing.JTextField txtNumero;
     // End of variables declaration//GEN-END:variables
+//Getters y Setters de los botones
+      public JButton getBtnAceptar() {
+        return btnAceptar;
+    }
+
+    public void setBtnAceptar(JButton btnAceptar) {
+        this.btnAceptar = btnAceptar;
+    }
+
+    public JButton getBtnBorrar() {
+        return btnBorrar;
+    }
+
+    public void setBtnBorrar(JButton btnBorrar) {
+        this.btnBorrar = btnBorrar;
+    }
+
+    public JButton getBtnBuscar() {
+        return btnBuscar;
+    }
+
+    public void setBtnBuscar(JButton btnBuscar) {
+        this.btnBuscar = btnBuscar;
+    }
+
+    public JButton getBtnCancelar() {
+        return btnCancelar;
+    }
+
+    public void setBtnCancelar(JButton btnCancelar) {
+        this.btnCancelar = btnCancelar;
+    }
+
+    public JButton getBtnCrear() {
+        return btnCrear;
+    }
+
+    public void setBtnCrear(JButton btnCrear) {
+        this.btnCrear = btnCrear;
+    }
+
+    public JButton getBtnEditar() {
+        return btnEditar;
+    }
+
+    public void setBtnEditar(JButton btnEditar) {
+        this.btnEditar = btnEditar;
+    }
+    //Text Fields
+     public void setTxtBuscar(JTextField txtBuscar) {
+        this.txtBuscar = txtBuscar;
+    }
+
+    public JTextField getTxtFechaEntrada() {
+        return txtFechaEntrada;
+    }
+
+    public void setTxtFechaEntrada(JTextField txtFechaEntrada) {
+        this.txtFechaEntrada = txtFechaEntrada;
+    }
+
+    public JTextField getTxtFechaSalida() {
+        return txtFechaSalida;
+    }
+
+    public void setTxtFechaSalida(JTextField txtFechaSalida) {
+        this.txtFechaSalida = txtFechaSalida;
+    }
+
+    public JTextField getTxtId() {
+        return txtId;
+    }
+
+    public void setTxtId(JTextField txtId) {
+        this.txtId = txtId;
+    }
+
+    public JTextField getTxtBuscar() {
+        return txtBuscar;
+    }
+
+   
+    public JTextField getTxtIdHabitacion() {
+        return txtIdHabitacion;
+    }
+
+    public void setTxtIdHabitacion(JTextField txtIdHabitacion) {
+        this.txtIdHabitacion = txtIdHabitacion;
+    }
+
+    public JTextField getTxtNumero() {
+        return txtNumero;
+    }
+
+    public void setTxtNumero(JTextField txtNumero) {
+        this.txtNumero = txtNumero;
+    }
+    //Lista
+    
+    public JLabel getLblLista() {
+        return lblLista;
+    }
+
+    public void setLblLista(JLabel lblLista) {
+        this.lblLista = lblLista;
+    }
+
+    public JList<String> getListReserva() {
+        return listReserva;
+    }
+
+    public void setListReserva(JList<String> listReserva) {
+        this.listReserva = listReserva;
+    }
+    
+    // Checkbox
+   public JCheckBox getCheckCancelada() {
+        return checkCancelada;
+    }
+
+    public void setCheckCancelada(JCheckBox checkCancelada) {
+        this.checkCancelada = checkCancelada;
+    }
+    /**
+     * Devuelve el objeto JLabel que muestra un error al introducir datos. Solo lo llama el listener del controlador.
+     * @return JLabel
+     */
+    public JLabel getLblErrorCrud() {
+        return lblErrorCrud;
+    }
+
+    public void setLblErrorCrud(JLabel lblErrorCrud) {
+        this.lblErrorCrud = lblErrorCrud;
+    }
+
+
+
 }
