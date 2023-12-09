@@ -5,6 +5,7 @@ package aplicacion;
 
 import controlador.Controlador;
 import modelo.AccesoDAO;
+import vista.MenuInicio;
 
 
 /**
@@ -18,7 +19,8 @@ public class Run {
         
 
         AccesoDAO acceso = new AccesoDAO();
-        Controlador controlador = new Controlador();
+        Controlador controlador = new Controlador(new MenuInicio(),acceso);
+        
 
     }
 

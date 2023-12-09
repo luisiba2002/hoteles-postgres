@@ -8,6 +8,7 @@ import java.awt.event.ActionEvent;
 import java.util.ArrayList;
 import javax.swing.ListModel;
 import javax.swing.event.ListSelectionEvent;
+import modelo.AccesoDAO;
 import modelo.Clientes;
 import vista.GestionClientes;
 
@@ -20,13 +21,14 @@ public class ControlClientes extends ControlPadre {
     GestionClientes vista;
     ArrayList<Clientes> clientes;
     ListModel<String> lista;
+    AccesoDAO acceso;
 
-    public ControlClientes(GestionClientes vista) {
+    public ControlClientes(GestionClientes vista, AccesoDAO acceso) {
         super(vista.getBtnCrear(), vista.getBtnBorrar(), vista.getBtnEditar(), vista.getBtnAceptar(), 
                 vista.getBtnCancelar(), vista.getBtnBuscarCliente(), vista.getJList(), vista.getLblErrorCrud());
         this.vista = vista;
+        this.acceso = acceso;
         clientes = new ArrayList<>();
-        
     }
 
     @Override
@@ -36,20 +38,16 @@ public class ControlClientes extends ControlPadre {
     
     @Override
     public void actionPerformed(ActionEvent e) {
-        String accion = e.getActionCommand();
-        if (accion.equals("Buscar")){            
-            buscar();
-        } else if (accion.equals("Crear")){
-            crear();
-        } else if (accion.equals("Borrar")){
-            borrar();
-        } else if (accion.equals("Editar")){
-            editar();
-        } else if (accion.equals("Aceptar")){
-            aceptar();
-        }else if (accion.equals("Cancelar")){
-            cancelar();
-        } 
+        switch (e.getActionCommand()) {
+            case "Buscar" -> buscar();
+            case "Crear" -> crear();
+            case "Borrar" -> borrar();
+            case "Editar" -> editar();
+            case "Aceptar" -> aceptar();
+            case "Cancelar" -> cancelar();
+            default -> {
+            }
+        }
     }
     
     

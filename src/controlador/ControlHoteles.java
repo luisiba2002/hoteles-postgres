@@ -8,6 +8,7 @@ import java.awt.event.ActionEvent;
 import java.util.ArrayList;
 import javax.swing.ListModel;
 import javax.swing.event.ListSelectionEvent;
+import modelo.AccesoDAO;
 import modelo.Clientes;
 import vista.GestionHoteles;
 
@@ -20,11 +21,13 @@ public class ControlHoteles extends ControlPadre {
     GestionHoteles vista;
     ArrayList<Clientes> clientes;
     ListModel<String> lista;
+    AccesoDAO acceso;
 
-    public ControlHoteles(GestionHoteles vista) {
+    public ControlHoteles(GestionHoteles vista, AccesoDAO acceso) {
         super(vista.getBtnCrear(), vista.getBtnBorrar(), vista.getBtnEditar(), vista.getBtnAceptar(), 
-                vista.getBtnCancelar(), vista.getBtnBuscar(), vista.getJList(), vista.getLblErrorCrud());
+                vista.getBtnCancelar(), vista.getBtnBuscar(), vista.getList(), vista.getLblErrorCrud());
         this.vista = vista;
+        this.acceso = acceso;
         clientes = new ArrayList<>();
         
     }
@@ -47,7 +50,7 @@ public class ControlHoteles extends ControlPadre {
             editar();
         } else if (accion.equals("Aceptar")){
             aceptar();
-        }else if (accion.equals("Cancelar")){
+        } else if (accion.equals("Cancelar")){
             cancelar();
         } 
     }
