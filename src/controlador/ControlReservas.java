@@ -25,7 +25,7 @@ public class ControlReservas extends ControlPadre {
 
     public ControlReservas(GestionReservas vista, AccesoDAO acceso) {
         super(vista.getBtnCrear(), vista.getBtnBorrar(), vista.getBtnEditar(), vista.getBtnAceptar(), 
-                vista.getBtnCancelar(), vista.getBtnBuscar(), vista.getJList(), vista.getLblErrorCrud());
+                vista.getBtnCancelar(), vista.getBtnBuscar(), vista.getListReserva(), vista.getLblErrorCrud());
         this.vista = vista;
         this.acceso = acceso;
         clientes = new ArrayList<>();
