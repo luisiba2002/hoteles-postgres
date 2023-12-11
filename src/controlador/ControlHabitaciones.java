@@ -10,6 +10,7 @@ import java.sql.SQLException;
 
 import java.awt.event.ActionEvent;
 import java.util.ArrayList;
+import javax.swing.JOptionPane;
 import javax.swing.ListModel;
 import javax.swing.event.ListSelectionEvent;
 import modelo.AccesoDAO;
@@ -50,7 +51,18 @@ public class ControlHabitaciones extends ControlPadre {
         if (accion.equals("Buscar")) {
             buscar();
         } else if (accion.equals("Crear")) {
-            crear();
+             
+            int idHotel = Integer.parseInt(vista.getTxtNumero());
+            int capacidad = Integer.parseInt(vista.getTxtCapacidad());
+            String descripcion = vista.getTxtDesc();
+            double precioNoche = Double.parseDouble(vista.getTxtPrecio());
+
+            // Crear una nueva instancia de Habitacion
+            Habitacion habitacion = new Habitacion(idHotel, capacidad, descripcion, precioNoche);
+
+            // Llamar al método crear con la instancia de Habitacion
+            crear(habitacion);
+            
         } else if (accion.equals("Borrar")) {
             borrar();
         } else if (accion.equals("Editar")) {
@@ -93,6 +105,8 @@ public class ControlHabitaciones extends ControlPadre {
             // Verificar si al menos una fila fue afectada
             if (filasAfectadas > 0) {
                 System.out.println("Habitación creada correctamente.");
+               
+                
             } else {
                 System.out.println("No se pudo crear la habitación.");
             }
