@@ -74,7 +74,18 @@ public class ControlHabitaciones extends ControlPadre {
             borrar(habitacionBorrar);
            
         } else if (accion.equals("Editar")) {
-            editar();
+             // Obtener valores desde la interfaz gráfica (ajusta según tu implementación)
+            int idHotelEditar = Integer.parseInt(vista.getTxtNumero());
+            int capacidadEditar = Integer.parseInt(vista.getTxtCapacidad());
+            String descripcionEditar = vista.getTxtDesc();
+            double precioNocheEditar = Double.parseDouble(vista.getTxtPrecio());
+
+            // Crear una nueva instancia de Habitacion
+            Habitacion habitacionEditar = new Habitacion(idHotelEditar, capacidadEditar, descripcionEditar, precioNocheEditar);
+
+            // Llamar al método editar con la instancia de Habitacion
+            editar(habitacionEditar);
+            
         } else if (accion.equals("Aceptar")) {
             aceptar();
         } else if (accion.equals("Cancelar")) {
