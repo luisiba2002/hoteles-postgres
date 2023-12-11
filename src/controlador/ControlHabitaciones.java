@@ -67,112 +67,112 @@ public class ControlHabitaciones extends ControlPadre {
     }
 
     private void crear(Habitacion habitacion) {
-    Connection conexion = null;
-    PreparedStatement statement = null;
-
-    try {
-        // Obtener la conexión a la base de datos
-        ConexionMB conexionMB = new ConexionMB(); // Declarar e instanciar la clase ConexionMB
-        conexion = conexionMB.conectar();
-
-        // Sentencia SQL INSERT
-        String sql = "INSERT INTO habitaciones (id_hotel, capacidad, descripcion, precio_noche) VALUES (?, ?, ?, ?)";
-
-        // Crear el PreparedStatement
-        statement = conexion.prepareStatement(sql);
-
-        // Establecer los valores de los parámetros
-        statement.setInt(1, habitacion.getIdHotel());
-        statement.setInt(2, habitacion.getCapacidad());
-        statement.setString(3, habitacion.getDescripcion());
-        statement.setDouble(4, habitacion.getPrecioNoche());
-
-        // Ejecutar la sentencia SQL
-        int filasAfectadas = statement.executeUpdate();
-
-        // Verificar si al menos una fila fue afectada
-        if (filasAfectadas > 0) {
-            System.out.println("Habitación creada correctamente.");
-        } else {
-            System.out.println("No se pudo crear la habitación.");
-        }
-    } catch (SQLException e) {
-        e.printStackTrace(); // Manejo adecuado de excepciones en la práctica
-    } finally {
-        // Cerrar recursos
-        if (statement != null) {
-            try {
-                statement.close();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
-        }
-        if (conexion != null) {
-            try {
-                conexion.close();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
-        }
-    }
-}
-
-
-  private void borrar(Habitacion habitacion) {
-    Connection conexion = null;
-    PreparedStatement statement = null;
-
-    try {
-        // Obtener la conexión a la base de datos
-        ConexionMB conexionMB = new ConexionMB(); // Declarar e instanciar la clase ConexionMB
-        conexion = conexionMB.conectar();
-
-        // Sentencia SQL DELETE
-        String sql = "DELETE FROM habitaciones WHERE id_habitacion = ?";
-
-        // Crear el PreparedStatement
-        statement = conexion.prepareStatement(sql);
-
-        // Establecer el valor del parámetro
-        statement.setInt(1, habitacion.getIdHotel()); // Suponiendo que id_habitacion es el identificador único
-
-        // Ejecutar la sentencia SQL
-        int filasAfectadas = statement.executeUpdate();
-
-        // Verificar si al menos una fila fue afectada
-        if (filasAfectadas > 0) {
-            System.out.println("Habitación eliminada correctamente.");
-        } else {
-            System.out.println("No se pudo eliminar la habitación.");
-        }
-    } catch (SQLException e) {
-        e.printStackTrace(); // Manejo adecuado de excepciones en la práctica
-    } finally {
-        // Cerrar recursos
-        if (statement != null) {
-            try {
-                statement.close();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
-        }
-        if (conexion != null) {
-            try {
-                conexion.close();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
-        }
-    }
-}
-
-    public void editar(Habitacion habitacion) {
         Connection conexion = null;
         PreparedStatement statement = null;
 
         try {
             // Obtener la conexión a la base de datos
             ConexionMB conexionMB = new ConexionMB(); // Declarar e instanciar la clase ConexionMB
+            conexion = conexionMB.conectar();
+
+            // Sentencia SQL INSERT
+            String sql = "INSERT INTO habitaciones (id_hotel, capacidad, descripcion, precio_noche) VALUES (?, ?, ?, ?)";
+
+            // Crear el PreparedStatement
+            statement = conexion.prepareStatement(sql);
+
+            // Establecer los valores de los parámetros
+            statement.setInt(1, habitacion.getIdHotel());
+            statement.setInt(2, habitacion.getCapacidad());
+            statement.setString(3, habitacion.getDescripcion());
+            statement.setDouble(4, habitacion.getPrecioNoche());
+
+            // Ejecutar la sentencia SQL
+            int filasAfectadas = statement.executeUpdate();
+
+            // Verificar si al menos una fila fue afectada
+            if (filasAfectadas > 0) {
+                System.out.println("Habitación creada correctamente.");
+            } else {
+                System.out.println("No se pudo crear la habitación.");
+            }
+        } catch (SQLException e) {
+            e.printStackTrace(); // Manejo adecuado de excepciones en la práctica
+        } finally {
+            // Cerrar recursos
+            if (statement != null) {
+                try {
+                    statement.close();
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+            if (conexion != null) {
+                try {
+                    conexion.close();
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
+
+    private void borrar(Habitacion habitacion) {
+        Connection conexion = null;
+        PreparedStatement statement = null;
+
+        try {
+            // Obtener la conexión a la base de datos
+            ConexionMB conexionMB = new ConexionMB(); // Declarar e instanciar la clase ConexionMB
+            conexion = conexionMB.conectar();
+
+            // Sentencia SQL DELETE
+            String sql = "DELETE FROM habitaciones WHERE id_habitacion = ?";
+
+            // Crear el PreparedStatement
+            statement = conexion.prepareStatement(sql);
+
+            // Establecer el valor del parámetro
+            statement.setInt(1, habitacion.getIdHotel()); // Suponiendo que id_habitacion es el identificador único
+
+            // Ejecutar la sentencia SQL
+            int filasAfectadas = statement.executeUpdate();
+
+            // Verificar si al menos una fila fue afectada
+            if (filasAfectadas > 0) {
+                System.out.println("Habitación eliminada correctamente.");
+            } else {
+                System.out.println("No se pudo eliminar la habitación.");
+            }
+        } catch (SQLException e) {
+            e.printStackTrace(); // Manejo adecuado de excepciones en la práctica
+        } finally {
+            // Cerrar recursos
+            if (statement != null) {
+                try {
+                    statement.close();
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+            if (conexion != null) {
+                try {
+                    conexion.close();
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
+
+    private void editar(Habitacion habitacion) {
+        Connection conexion = null;
+        PreparedStatement statement = null;
+
+        try {
+            // Obtener la conexión a la base de datos
+            ConexionMB conexionMB = new ConexionMB();
+            // Declarar e instanciar la clase ConexionMB
             conexion = conexionMB.conectar();
 
             // Sentencia SQL UPDATE
@@ -217,7 +217,7 @@ public class ControlHabitaciones extends ControlPadre {
     }
 
     private void cancelar() {
-
+        desactivarModo();
     }
 
 }
