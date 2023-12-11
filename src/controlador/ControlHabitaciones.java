@@ -44,7 +44,6 @@ public class ControlHabitaciones extends ControlPadre {
     public void valueChanged(ListSelectionEvent e) {
         // Se activa cuando cambia el índice de lo seleccionado en la lista.
     }
-
     @Override
     public void actionPerformed(ActionEvent e) {
         String accion = e.getActionCommand();
@@ -248,7 +247,6 @@ public class ControlHabitaciones extends ControlPadre {
     private void aceptar() {
 
     }
-
     private void cancelar() {
         desactivarModo();
     }
