@@ -64,7 +64,15 @@ public class ControlHabitaciones extends ControlPadre {
             crear(habitacion);
             
         } else if (accion.equals("Borrar")) {
-            borrar();
+           
+            int idHotelBorrar = Integer.parseInt(vista.getTxtNumero());
+
+            // Crear una nueva instancia de Habitacion
+            Habitacion habitacionBorrar = new Habitacion(idHotelBorrar, 0, "", 0.0);
+
+            // Llamar al método borrar con la instancia de Habitacion
+            borrar(habitacionBorrar);
+           
         } else if (accion.equals("Editar")) {
             editar();
         } else if (accion.equals("Aceptar")) {
