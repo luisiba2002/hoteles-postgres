@@ -43,7 +43,24 @@ public class ControlClientes extends ControlPadre {
     public void actionPerformed(ActionEvent e) {
         switch (e.getActionCommand()) {
             case "Buscar" -> buscar();
-            case "Crear" -> crear();
+            case "Crear" -> {
+                
+                String dni = vista.getTxtDni();
+                String nombre = vista.getTxtNombre();
+                String apellido = vista.getTxtApellido();
+                String correo = vista.getTxtCorreo();
+                
+                // Llamar al método crear con los valores obtenidos
+                boolean creacionExitosa = crear(dni, nombre, apellido, correo);
+                
+                // Realizar acciones adicionales si es necesario
+                if (creacionExitosa) {
+                    System.out.println("Cliente creado correctamente.");
+                    // Puedes hacer más cosas aquí si es necesario
+                } else {
+                    System.out.println("Error al crear el cliente.");
+                }
+            }
             case "Borrar" -> borrar();
             case "Editar" -> editar();
             case "Aceptar" -> aceptar();
