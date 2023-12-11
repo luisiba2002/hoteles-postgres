@@ -3,13 +3,16 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package controlador;
-
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 import java.awt.event.ActionEvent;
 import java.util.ArrayList;
 import javax.swing.ListModel;
 import javax.swing.event.ListSelectionEvent;
 import modelo.AccesoDAO;
 import modelo.Clientes;
+import modelo.ConexionMB;
 import vista.GestionClientes;
 
 /**
@@ -55,9 +58,54 @@ public class ControlClientes extends ControlPadre {
         
     }
 
-    private void crear() {
-        
+    public boolean crear(String dni, String nombre, String apellido, String correo) {
+        Connection conexion = null;
+        PreparedStatement statement = null;
+
+        try {
+            // Obtener la conexión a la base de datos
+            ConexionMB conexionMB = new ConexionMB();
+            conexion = conexionMB.conectar();
+
+            // Sentencia SQL para insertar un nuevo cliente
+            String sql = "INSERT INTO clientes (dni, nombre, apellido, correo) VALUES (?, ?, ?, ?)";
+
+            // Crear el PreparedStatement
+            statement = conexion.prepareStatement(sql);
+
+            // Establecer los valores de los parámetros
+            statement.setString(1, dni);
+            statement.setString(2, nombre);
+            statement.setString(3, apellido);
+            statement.setString(4, correo);
+
+            // Ejecutar la sentencia SQL
+            int filasAfectadas = statement.executeUpdate();
+
+            // Verificar si al menos una fila fue afectada
+            return filasAfectadas > 0;
+        } catch (SQLException e) {
+            e.printStackTrace(); // Manejo adecuado de excepciones en la práctica
+            return false;
+        } finally {
+            // Cerrar recursos
+            if (statement != null) {
+                try {
+                    statement.close();
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+            if (conexion != null) {
+                try {
+                    conexion.close();
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
     }
+
 
     private void borrar() {
      
