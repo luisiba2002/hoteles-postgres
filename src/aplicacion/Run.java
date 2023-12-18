@@ -4,7 +4,7 @@
 package aplicacion;
 
 import controlador.Controlador;
-import modelo.AccesoDAO;
+import modelo.DAO.AccesoDAO;
 import vista.MenuInicio;
 
 

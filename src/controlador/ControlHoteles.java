@@ -8,8 +8,8 @@ import java.awt.event.ActionEvent;
 import java.util.ArrayList;
 import javax.swing.ListModel;
 import javax.swing.event.ListSelectionEvent;
-import modelo.AccesoDAO;
-import modelo.Clientes;
+import modelo.DAO.AccesoDAO;
+import modelo.clases.Clientes;
 import vista.GestionHoteles;
 
 /**
